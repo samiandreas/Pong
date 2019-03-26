@@ -23,19 +23,19 @@ public class PongMain {
 				//player = x.split(" ");
 				System.out.println(x+"playyer");
 				x = in.readLine();
-				cpu = x.split(" ");
+				//cpu = x.split(" ");
 				//System.out.println(x+"cpu");
 				x = in.readLine();
 				ball = x.split(" ");
 				//System.out.println(x+"ball");
 				x = in.readLine();
 				//System.out.println(x);
-				move = Integer.parseInt(player[2]) - (int)Double.parseDouble(ball[2])/10;
+				move = Integer.parseInt(player[1]) - (int)(Double.parseDouble(ball[1])/6.5);
 				System.out.println(move);
-				if (move < 0) {
-					move = 18;
-				} else if (move > 0) {
-					move = -18;
+				if (move < -30) {
+					move = (int)Double.parseDouble(ball[4])*6;
+				} else if (move > -30) {
+					move = -(int)Double.parseDouble(ball[4])*6;
 				}
 				System.out.println(move);
 				out.println("move " + move);
